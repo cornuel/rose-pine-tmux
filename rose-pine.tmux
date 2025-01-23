@@ -28,7 +28,7 @@ setw() {
 
 main() {
   local theme
-  theme="$(get_tmux_option "@rose_pine_flavour" "main")"
+  theme="$(get_tmux_option "@rose_pine_variant" "dawn")"
 
   # Aggregate all commands in one array
   local tmux_commands=()
@@ -40,7 +40,7 @@ main() {
 
   # status
   set status "on"
-  set status-bg "${thm_bg}"
+  # set status-bg "${thm_bg}"
   set status-justify "left"
   set status-left-length "100"
   set status-right-length "100"
@@ -94,7 +94,7 @@ main() {
   readonly show_directory="#[fg=$thm_love,bg=$thm_bg,nobold,nounderscore,noitalics]$right_separator#[fg=$thm_bg,bg=$thm_love,nobold,nounderscore,noitalics]  #[fg=$thm_fg,bg=$thm_bg] #{b:pane_current_path} #{?client_prefix,#[fg=$thm_love]"
 
   local show_window
-  readonly show_window="#[fg=$thm_love,bg=$thm_bg,nobold,nounderscore,noitalics]$right_separator#[fg=$thm_bg,bg=$thm_love,nobold,nounderscore,noitalics] #[fg=$thm_fg,bg=$thm_bg] #W #{?client_prefix,#[fg=$thm_love]"
+  readonly show_window="#[fg=$thm_gold,bg=$thm_bg,nobold,nounderscore,noitalics]$right_separator#[fg=$thm_bg,bg=$thm_gold,nobold,nounderscore,noitalics] #[fg=$thm_fg,bg=$thm_bg] #W #{?client_prefix,#[fg=$thm_love]"
 
   local show_session
   readonly show_session="#[fg=$thm_iris]}#[bg=$thm_bg]$right_separator#{?client_prefix,#[bg=$thm_love],#[bg=$thm_iris]}#[fg=$thm_bg] #[fg=$thm_fg,bg=$thm_bg] #S "
